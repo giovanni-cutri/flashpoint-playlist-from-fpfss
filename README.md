@@ -20,4 +20,6 @@ Finally, run *playlist-creator.py* and it will automatically generate a *playlis
 
 - The script checks for the titles of the games in the Flashpoint database and associates them with their Id. However, two different games can share the same title, which means the script will find only one of them (possibly the incorrect one) and add it to the playlist.
 
+- For the same reason, the playlist will also include games that were submitted by the user, but did not get accepted because they were duplicates of pre-existing games.
+
 - The script creates only one playlist, which includes both games and animations.
