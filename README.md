@@ -23,3 +23,7 @@ Finally, run *playlist-creator.py* and it will automatically generate a *playlis
 - For the same reason, the playlist will also include games that were submitted by the user, but did not get accepted because they were duplicates of pre-existing games.
 
 - The script creates only one playlist, which includes both games and animations.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/giovanni-cutri/flashpoint-playlist-from-submissions/blob/main/LICENSE) file for details.
