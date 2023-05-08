@@ -12,7 +12,7 @@ Requires Python 3, which you can download [here](https://www.python.org/download
 
 In order to create the playlist, go to FPFSS, use advanced search to get all the submission of the user and increase the number of results per page so they all appear on a single page.
 
-Then copy the HTML source code of the web page and save it in a file called "source.txt" in the same folder of the script.
+Then copy the HTML source code of the web page and save it in a text file called *"source.txt"* in the same folder of the script.
 
 Finally, run *playlist-creator.py* and it will automatically generate a *playlist.json* file containing your playlist.
 
