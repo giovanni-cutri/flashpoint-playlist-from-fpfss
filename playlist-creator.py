@@ -4,11 +4,11 @@ import bs4
 import json
 
 # generate unique id for the playlist
-id = str(uuid.uuid4())
+playlist_id = str(uuid.uuid4())
 
 # create an empty playlist
 empty_playlist = {
-    "id": id,
+    "id": playlist_id,
     "games": [],
     "title": "User's submissions",
     "description": "All the submissions of a particular user.",
@@ -48,9 +48,10 @@ games = []
 
 for count, id in enumerate(ids):
     game = {
-        "gameId": id,
+        "playlistId": playlist_id,
         "order" : count,
-        "notes": ""
+        "notes": "",
+        "gameId": id
     }
     games.append(game)
 
