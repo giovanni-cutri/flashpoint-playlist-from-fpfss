@@ -3,8 +3,10 @@ import sqlite3
 import bs4
 import json
 
+# generate unique id for the playlist
 id = str(uuid.uuid4())
 
+# create an empty playlist
 empty_playlist = {
     "id": id,
     "games": [],
