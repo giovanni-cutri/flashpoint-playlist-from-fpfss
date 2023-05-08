@@ -15,7 +15,7 @@ empty_playlist = {
     "author": "",
     "icon": "",
     "library": "arcade",
-	"extreme": bool(0)
+    "extreme": bool(0)
 }
 
 f = open("source.txt", "r", encoding = "utf-8")
