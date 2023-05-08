@@ -16,14 +16,11 @@ empty_playlist = {
 	"extreme": bool(0)
 }
 
-print("In order to create the playlist, go to FPFSS, use advanced search to get all the submission of the user and increase the number of results per page so they all appear on a single page.")
-print("Then copy the HTML source code and save it in a file called 'source.txt' in this same folder.")
-
-f = open("source.txt", "r")
+f = open("source.txt", "r", encoding = "utf-8")
 text = f.read()
 f.close()
 
-soup = bs4.BeautifulSoup(text)
+soup = bs4.BeautifulSoup(text, "html.parser")
 titles = []
 elements = soup.select(".submission-table-title")
 
