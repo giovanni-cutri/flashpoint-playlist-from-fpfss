@@ -6,9 +6,7 @@ A tool to create Flashpoint playlists of games submitted by a particular user.
 Requires Python 3, which you can download [here](https://www.python.org/downloads/), along with the *Beatiful Soup* library.
 
 - Download the *playlist-creator.py* file from this repository and place it in any folder.
-- Inside that same folder, you will need to copy two files:
-    - The playlist you want to sort, in JSON format (which is the default export format from the Flashpoint launcher);
-     - The *flashpoint.sqlite* file, which you can find in your local Flashpoint copy, inside the *Data* folder.
+- Inside that same folder, you will need to copy the *flashpoint.sqlite* file, which you can find in your local Flashpoint copy, inside the *Data* folder.
 
 # Usage
 
