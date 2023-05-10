@@ -1,3 +1,5 @@
+![](https://github.com/giovanni-cutri/flashpoint-playlist-from-submissions/blob/main/images/socialify.png)
+
 # Flashpoint Playlists from Submissions
 A tool to create [Flashpoint](https://bluemaxima.org/flashpoint/) playlists of games submitted by a particular user on [FPFSS](https://fpfss.unstable.life/).
 
