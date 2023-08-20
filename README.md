@@ -29,4 +29,4 @@ Requires Python 3, which you can download [here](https://www.python.org/download
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](https://github.com/giovanni-cutri/flashpoint-playlist-from-submissions/blob/main/LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](https://github.com/giovanni-cutri/flashpoint-playlist-from-fpfss/blob/main/LICENSE) file for details.
