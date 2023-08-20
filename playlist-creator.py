@@ -10,8 +10,8 @@ playlist_id = str(uuid.uuid4())
 empty_playlist = {
     "id": playlist_id,
     "games": [],
-    "title": "User's submissions",
-    "description": "All the submissions of a particular user.",
+    "title": "No Title",
+    "description": "No Description",
     "author": "",
     "icon": "",
     "library": "arcade",
@@ -48,7 +48,6 @@ games = []
 
 for count, id in enumerate(ids):
     game = {
-        "playlistId": playlist_id,
         "order" : count,
         "notes": "",
         "gameId": id
