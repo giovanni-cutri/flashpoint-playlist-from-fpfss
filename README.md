@@ -14,11 +14,16 @@ Requires Python 3, which you can download [here](https://www.python.org/download
 - Copy the HTML source code of the web page and save it in a text file called *source.txt* in the same folder of the script.
 - Finally, run *playlist-creator.py* and it will automatically generate a *playlist.json* file containing your playlist.
 
+# Usage examples
+
+- Create a playlist containing all the games submitted by a particular user.
+- Create a playlist containing all the games a user has approved or verified.
+
 # Warnings
 
 - The script checks for the titles of the games in the Flashpoint database and associates them with their Id. However, two different games can share the same title, which means the script will find only one of them (possibly the incorrect one) and add it to the playlist.
 
-- The playlist will also include games that were submitted, but did not get accepted because they were duplicates of pre-existing games.
+- For the same reason, the playlist will also include games that were submitted, but did not get accepted because they were duplicates of pre-existing games.
 
 - The script creates only one playlist, which includes both games and animations.
 
