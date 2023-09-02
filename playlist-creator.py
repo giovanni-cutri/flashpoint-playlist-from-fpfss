@@ -1,5 +1,6 @@
 import uuid
 import sqlite3
+import requests
 import bs4
 import json
 
@@ -18,11 +19,19 @@ empty_playlist = {
     "extreme": bool(0)
 }
 
-f = open("source.txt", "r", encoding = "utf-8")
-text = f.read()
+f = open("cookie.txt", "r", encoding = "utf-8")
+cookie = f.read()
 f.close()
 
-soup = bs4.BeautifulSoup(text, "html.parser")
+headers = {"Cookie": f"login={cookie}"}
+
+f = open("url.txt", "r", encoding = "utf-8")
+url = f.read()
+f.close()
+
+res = requests.get(url, headers=headers)
+
+soup = bs4.BeautifulSoup(res.text, "html.parser")
 titles = []
 elements = soup.select(".submission-table-title")
 
