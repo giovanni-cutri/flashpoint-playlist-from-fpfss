@@ -10,8 +10,8 @@ Requires Python 3, which you can download [here](https://www.python.org/download
 
 # Usage
 
-- Go to FPFSS, switch to advanced search and perform your search by filling the fields appropriately. Additionally, increase the number of results per page to a sufficient amount so that they all appear on a single page.
-- Copy the HTML source code of the web page and save it in a text file called *source.txt* in the same folder of the script.
+- Go to FPFSS, switch to advanced search and perform your search by filling the fields appropriately. Additionally, increase the number of results per page to a sufficient amount so that they all appear on a single page. Copy the resulting URL in a text file called *url.txt* in the same folder of the script.
+- Copy the value of the login cookie that you can find in the *Application* tab of your browser's developer console and save it in a text file called *cookie.txt* in the same folder of the script.
 - Finally, run *playlist-creator.py* and it will automatically generate a *playlist.json* file containing your playlist.
 
 # Usage examples
