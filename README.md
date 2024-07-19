@@ -21,7 +21,7 @@ Requires Python 3, which you can download [here](https://www.python.org/download
 
 ## Warnings
 
-- The script checks for the titles of the games in the Flashpoint database and associates them with their Id. However, two different games can share the same title, which means the script will find only one of them (possibly the incorrect one) and add it to the playlist.
+- Prior to April 27, 2023, the id of the games added to Flashpoint was not explicitly stated in their submission page. As a result, for games added before that date, the script checks for the title of the game in the Flashpoint database and associates it with the corresponding id. However, two different games can share the same title, which means the script will find only one of them (possibly the incorrect one) and add it to the playlist.
 
 - For the same reason, the playlist will also include games that were submitted, but did not get accepted because they were duplicates of pre-existing games.
 
