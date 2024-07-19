@@ -4,6 +4,8 @@ import requests
 import bs4
 import json
 
+base_url = "https://fpfss.unstable.life"
+
 # generate unique id for the playlist
 playlist_id = str(uuid.uuid4())
 
@@ -32,16 +34,33 @@ f.close()
 res = requests.get(url, headers=headers)
 
 soup = bs4.BeautifulSoup(res.text, "html.parser")
-titles = []
-elements = soup.select(".submission-table-title")
+urls = []
+elements = soup.select("td.center a")
 
 for i in elements:
-    title = i.getText()
-    titles.append(title)
+    if i.getText() == "View":
+        url = f"{base_url}{i.attrs['href']}"
+        urls.append(url)
 
+ids = []
+titles = []
+
+for url in urls:
+    res = requests.get(url, headers=headers)
+    soup = bs4.BeautifulSoup(res.text, "html.parser")
+    if "Marked the submission as added to Flashpoint. Game ID:" in res.text:    # if the submission was added to Flashpoint after April 27, 2023, the game ID is shown in the page
+        submission_comments = soup.select("div.comment-body")
+        for i in submission_comments:
+            if "Marked the submission as added to Flashpoint. Game ID:" in i.getText():
+                id = i.getText().split("Game ID: ")[-1].strip()
+                ids.append(id)
+    else:    # otherwise, resort to the title
+        title = soup.select(".submission-table-title")[0].getText()
+        titles.append(title)
+
+# get the remaining ids from titles
 con = sqlite3.connect("flashpoint.sqlite")
 cur = con.cursor()
-ids = []
 
 for title in titles:
     res = cur.execute('SELECT id FROM game WHERE title = ?', (title,))
@@ -52,6 +71,7 @@ for title in titles:
     id = value
     ids.append(id)
 
+ids.reverse()    # reverse the list
 new_playlist = empty_playlist
 games = []
 
